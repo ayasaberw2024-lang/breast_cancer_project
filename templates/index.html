@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Breast Cancer Prediction</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f5f5f5;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            width: 60%;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        input {
+            padding: 6px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+<h1>🧠 Breast Cancer Prediction</h1>
+
+<form method="POST">
+
+    <div class="grid">
+        <!-- 30 inputs -->
+        <input name="f1" placeholder="Mean Radius">
+        <input name="f2" placeholder="Mean Texture">
+        <input name="f3" placeholder="Mean Perimeter">
+        <input name="f4" placeholder="Mean Area">
+        <input name="f5" placeholder="Mean Smoothness">
+        <input name="f6" placeholder="Mean Compactness">
+        <input name="f7" placeholder="Mean Concavity">
+        <input name="f8" placeholder="Mean Concave Points">
+        <input name="f9" placeholder="Mean Symmetry">
+        <input name="f10" placeholder="Mean Fractal Dimension">
+
+        <input name="f11" placeholder="Radius Error">
+        <input name="f12" placeholder="Texture Error">
+        <input name="f13" placeholder="Perimeter Error">
+        <input name="f14" placeholder="Area Error">
+        <input name="f15" placeholder="Smoothness Error">
+        <input name="f16" placeholder="Compactness Error">
+        <input name="f17" placeholder="Concavity Error">
+        <input name="f18" placeholder="Concave Points Error">
+        <input name="f19" placeholder="Symmetry Error">
+        <input name="f20" placeholder="Fractal Dimension Error">
+
+        <input name="f21" placeholder="Worst Radius">
+        <input name="f22" placeholder="Worst Texture">
+        <input name="f23" placeholder="Worst Perimeter">
+        <input name="f24" placeholder="Worst Area">
+        <input name="f25" placeholder="Worst Smoothness">
+        <input name="f26" placeholder="Worst Compactness">
+        <input name="f27" placeholder="Worst Concavity">
+        <input name="f28" placeholder="Worst Concave Points">
+        <input name="f29" placeholder="Worst Symmetry">
+        <input name="f30" placeholder="Worst Fractal Dimension">
+    </div>
+
+    <button type="submit">Predict</button>
+
+</form>
+
+<div class="result">
+    {% if prediction == 1 %}
+        <h2 style="color:red;">❌ Malignant</h2>
+    {% elif prediction == 0 %}
+        <h2 style="color:green;">✅ Benign</h2>
+    {% elif prediction == "error" %}
+        <h2>⚠️ Invalid Input</h2>
+    {% endif %}
+</div>
+
+</body>
+</html>
